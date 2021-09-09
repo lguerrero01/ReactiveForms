@@ -4,11 +4,11 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-basicos',
   templateUrl: './basicos.component.html',
-  styleUrls: ['./basicos.component.css']
+  styles: [
+  ]
 })
 export class BasicosComponent implements OnInit {
 
- 
   @ViewChild('miFormulario') miFormulario!: NgForm;
 
   initForm = {

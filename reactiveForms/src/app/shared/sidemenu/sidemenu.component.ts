@@ -1,19 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
 interface MenuItem {
-  texto: string,
-  ruta: string 
+  texto: string;
+  ruta: string;
 }
+
+
 @Component({
-  selector: 'app-side-menu',
-  templateUrl: './side-menu.component.html',
-  styleUrls: ['./side-menu.component.css']
+  selector: 'app-sidemenu',
+  templateUrl: './sidemenu.component.html',
+  styles: [
+    `
+      li {
+        cursor:pointer;
+      }
+    `
+  ]
 })
-export class SideMenuComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class SidemenuComponent {
 
   templateMenu: MenuItem[] = [
     {
@@ -29,6 +33,7 @@ export class SideMenuComponent implements OnInit {
       ruta: './template/switches'
     },
   ];
+
   reactiveMenu: MenuItem[] = [
     {
       texto: 'Básicos',
@@ -43,4 +48,6 @@ export class SideMenuComponent implements OnInit {
       ruta: './reactive/switches'
     },
   ];
+
+
 }
